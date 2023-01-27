@@ -1,0 +1,27 @@
+ALGORITHM tri_carte
+VAR
+    arr : ARRAY_OF INTEGER [n];
+    i,j,n:INTEGER
+BEGIN
+    FUNCTION echange(x,y:INTEGER) : INTEGER
+    VAR
+        element:INTEGER
+    BEGIN
+       tmp=x;
+        x=y
+        y=tmp
+
+        RETURN y;
+    END
+    write(donner la longueur du tableau)
+    read(n)
+    FOR i FROM 0 TO n-1 STEP 1  DO
+    read(arr[i])
+    element=arr[i]
+        FOR j FROM i TO n-i-1 STEP 1  DO
+            IF (arr[j]>arr[j+1]) THEN
+                echange(arr[j],arr[j+1])
+            END_IF
+        END_FOR
+    END_FOR
+END
